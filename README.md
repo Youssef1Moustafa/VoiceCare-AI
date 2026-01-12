@@ -152,6 +152,18 @@ Access the application:
 
 ---
 
+## 🔧 Quick Start (Development)
+```bash
+git clone https://github.com/yourusername/VoiceCare-AI.git
+cd VoiceCare-AI
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+export HF_TOKEN="HF_TOKEN"
+python app.py
+```
+---
+
 ## 🌐 Live Demo
 
 🔗 Hugging Face Space – VoiceCare AI
@@ -183,6 +195,16 @@ This project is designed as a production-ready AI system and serves as a practic
 
 
 ---
+
+## 🤝 Contributing
+Contributions are welcome! Please open an issue or submit a pull request.
+
+---
+
+## 📞 Support
+###For questions or support:
+
+📧 Email: youssefmoustafa172@gmail.com
 
 
 
