@@ -1,31 +1,119 @@
-# 🔐 Secrets
-*.json
-.env
+# =========================
+# 🐍 Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
 
-# 🧠 Models & Embeddings
-models/*
+# =========================
+# 🧪 Virtual Environments
+# =========================
+venv/
+.env/
+.env.*
+ENV/
+env/
+
+# =========================
+# 🧠 ML Models & Artifacts
+# =========================
+models/*.pkl
+models/*.joblib
+models/*.bin
+models/*.pt
+models/*.onnx
+models/*.h5
+
+# =========================
+# 🧠 Vector Store (FAISS)
+# =========================
+vector_store/*.index
+vector_store/*.faiss
+vector_store/meta.json
+
+# =========================
+# 📊 Data Files (Sensitive / Large)
+# =========================
+data/*.xlsx
+data/*.csv
+data/*.json
+
+# Allow README files
+!data/README.md
 !models/README.md
-
-vector_store/*
 !vector_store/README.md
 
-# 📊 Data
-data/*
-!data/README.md
+# =========================
+# 🔐 Secrets & Credentials
+# =========================
+*.key
+*.pem
+*.crt
+*.json
+*service_account*
+*credentials*
+*secret*
 
-# 🐍 Python
-__pycache__/
-*.pyc
-*.pyo
+# Explicit Google service account files
+telecom-ai-agent-*.json
 
-# 🧪 Notebooks
-.ipynb_checkpoints/
-
-# 💻 OS
-.DS_Store
-
-# 🤗 Hugging Face Cache
-.cache/
-
-# 🐳 Docker
+# =========================
+# 🧾 Logs & Runtime Files
+# =========================
 *.log
+logs/
+*.tmp
+*.temp
+
+# =========================
+# 🎧 Audio / Media
+# =========================
+*.wav
+*.mp3
+*.flac
+*.ogg
+*.m4a
+
+# =========================
+# 🐳 Docker
+# =========================
+*.dockerignore
+docker-compose.override.yml
+
+# =========================
+# 🖥️ OS & Editor
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# VS Code
+.vscode/
+.history/
+
+# PyCharm
+.idea/
+
+# =========================
+# 🌐 Gradio / HF Runtime
+# =========================
+gradio_cached_examples/
+.cache/
+hf_cache/
+
+# =========================
+# 🧪 Jupyter / Experiments
+# =========================
+.ipynb_checkpoints/
+*.ipynb
+
+# =========================
+# 🗂️ Temporary Downloads
+# =========================
+downloads/
+tmp/
+temp/
