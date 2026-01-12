@@ -96,6 +96,7 @@ Includes confidence scoring and decision source tracking.
 
 ---
 
+```text
 VoiceCare-AI/
 ├── app.py
 ├── Dockerfile
