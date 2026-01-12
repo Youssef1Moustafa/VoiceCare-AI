@@ -1,6 +1,3 @@
-# =========================
-# 🐍 Python
-# =========================
 __pycache__/
 *.py[cod]
 *.pyo
@@ -8,19 +5,12 @@ __pycache__/
 *.so
 *.egg-info/
 .eggs/
-
-# =========================
-# 🧪 Virtual Environments
-# =========================
 venv/
 .env/
 .env.*
 ENV/
 env/
 
-# =========================
-# 🧠 ML Models & Artifacts
-# =========================
 models/*.pkl
 models/*.joblib
 models/*.bin
@@ -28,16 +18,10 @@ models/*.pt
 models/*.onnx
 models/*.h5
 
-# =========================
-# 🧠 Vector Store (FAISS)
-# =========================
 vector_store/*.index
 vector_store/*.faiss
 vector_store/meta.json
 
-# =========================
-# 📊 Data Files (Sensitive / Large)
-# =========================
 data/*.xlsx
 data/*.csv
 data/*.json
@@ -47,9 +31,6 @@ data/*.json
 !models/README.md
 !vector_store/README.md
 
-# =========================
-# 🔐 Secrets & Credentials
-# =========================
 *.key
 *.pem
 *.crt
@@ -61,32 +42,20 @@ data/*.json
 # Explicit Google service account files
 telecom-ai-agent-*.json
 
-# =========================
-# 🧾 Logs & Runtime Files
-# =========================
 *.log
 logs/
 *.tmp
 *.temp
 
-# =========================
-# 🎧 Audio / Media
-# =========================
 *.wav
 *.mp3
 *.flac
 *.ogg
 *.m4a
 
-# =========================
-# 🐳 Docker
-# =========================
 *.dockerignore
 docker-compose.override.yml
 
-# =========================
-# 🖥️ OS & Editor
-# =========================
 .DS_Store
 Thumbs.db
 desktop.ini
@@ -98,22 +67,13 @@ desktop.ini
 # PyCharm
 .idea/
 
-# =========================
-# 🌐 Gradio / HF Runtime
-# =========================
 gradio_cached_examples/
 .cache/
 hf_cache/
 
-# =========================
-# 🧪 Jupyter / Experiments
-# =========================
 .ipynb_checkpoints/
 *.ipynb
 
-# =========================
-# 🗂️ Temporary Downloads
-# =========================
 downloads/
 tmp/
 temp/
