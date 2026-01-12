@@ -1,45 +1,50 @@
-FROM python:3.10-slim-bookworm
+# ================================
+# 🐍 Base Image (Slim & Stable)
+# ================================
+FROM python:3.10-slim
 
-# ===============================
-# System Dependencies
-# ===============================
+# ================================
+# ⚙️ Environment Variables
+# ================================
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+ENV PIP_NO_CACHE_DIR=1
+ENV PIP_DISABLE_PIP_VERSION_CHECK=1
+ENV TRANSFORMERS_NO_TIKTOKEN=1
+
+# ================================
+# 📦 System Dependencies
+# ================================
 RUN apt-get update && apt-get install -y \
     ffmpeg \
-    libsndfile1 \
-    libavcodec-dev \
-    libavformat-dev \
-    libavdevice-dev \
-    libavfilter-dev \
-    libswscale-dev \
-    libswresample-dev \
-    pkg-config \
+    git \
     build-essential \
-    && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-# ===============================
-# Environment
-# ===============================
-ENV PYTHONUNBUFFERED=1
-ENV GRADIO_SERVER_NAME=0.0.0.0
-ENV GRADIO_SERVER_PORT=7860
-
+# ================================
+# 📂 Working Directory
+# ================================
 WORKDIR /app
 
-# ===============================
-# Python Dependencies (CRITICAL)
-# ===============================
+# ================================
+# 📄 Install Python Dependencies
+# (Layer cached for faster rebuilds)
+# ================================
 COPY requirements.txt .
 RUN pip install --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
 
-# ===============================
-# App Files
-# ===============================
+# ================================
+# 📦 Copy Application Code
+# ================================
 COPY . .
 
-RUN mkdir -p /app/models /app/data /app/vector_store
-
+# ================================
+# 🌐 Expose Gradio Port
+# ================================
 EXPOSE 7860
 
+# ================================
+# 🚀 Run Application
+# ================================
 CMD ["python", "app.py"]
