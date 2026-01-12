@@ -118,7 +118,7 @@ VoiceCare-AI/
 └── vector_store/
     └── README.md
 
-
+```
 
 ---
 
@@ -140,7 +140,7 @@ ADMIN_PASSWORD=******
 ⚠️ All secrets are excluded from the repository.
 
 
-***
+---
 
 ## ⚙️ Installation & Run (Docker)
 docker build -t voicecare-ai .
@@ -148,14 +148,14 @@ docker run -p 7860:7860 voicecare-ai
 Access the application:
 👉 http://localhost:7860
 
-***
+---
 
 ## 🌐 Live Demo
 
 🔗 Hugging Face Space – VoiceCare AI
 https://huggingface.co/spaces/youssefmoustafa172/VoiceCare-AI
 
-***
+---
 
 ## 👥 Meet the Team
 
@@ -166,15 +166,14 @@ https://huggingface.co/spaces/youssefmoustafa172/VoiceCare-AI
 | Mariam Maged   | AI Engineer |
 | Shorok Mohamed | AI Engineer |
 
-***
+---
 
 ## 🔐 Security & Privacy
 - No credentials stored in code
 - No customer data exposed
 - Models and vector indexes excluded from GitHub
 - Privacy-first system design
-
-***
+---
 
 ## 📄 License
 
