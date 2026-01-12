@@ -138,13 +138,15 @@ HF_TOKEN=your_huggingface_token
 GOOGLE_SERVICE_ACCOUNT='{}'
 ADMIN_PASSWORD=******
 ⚠️ All secrets are excluded from the repository.
-
+```
 
 ---
 
 ## ⚙️ Installation & Run (Docker)
+```bash
 docker build -t voicecare-ai .
 docker run -p 7860:7860 voicecare-ai
+```
 Access the application:
 👉 http://localhost:7860
 
