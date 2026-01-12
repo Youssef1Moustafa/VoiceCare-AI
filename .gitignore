@@ -1,0 +1,31 @@
+# 🔐 Secrets
+*.json
+.env
+
+# 🧠 Models & Embeddings
+models/*
+!models/README.md
+
+vector_store/*
+!vector_store/README.md
+
+# 📊 Data
+data/*
+!data/README.md
+
+# 🐍 Python
+__pycache__/
+*.pyc
+*.pyo
+
+# 🧪 Notebooks
+.ipynb_checkpoints/
+
+# 💻 OS
+.DS_Store
+
+# 🤗 Hugging Face Cache
+.cache/
+
+# 🐳 Docker
+*.log
