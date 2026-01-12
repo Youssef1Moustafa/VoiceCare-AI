@@ -1,6 +1,4 @@
-# ============================
-# 🐍 Python Cache & Artifacts
-# ============================
+
 __pycache__/
 *.py[cod]
 *.pyo
@@ -9,18 +7,12 @@ __pycache__/
 *.egg-info/
 .eggs/
 
-# ============================
-# 🧪 Virtual Environments
-# ============================
 venv/
 .env/
 .env.*
 ENV/
 env/
 
-# ============================
-# 📦 ML Models & Artifacts
-# ============================
 models/*.pkl
 models/*.joblib
 models/*.pt
@@ -28,60 +20,37 @@ models/*.bin
 models/*.onnx
 models/*.h5
 
-# ============================
-# 🔎 Vector Store (FAISS)
-# ============================
 vector_store/*.index
 vector_store/*.faiss
 vector_store/meta.json
 
-# ============================
-# 📊 Data Files (Sensitive)
-# ============================
 data/*.xlsx
 data/*.csv
 data/*.parquet
 data/*.json
 !data/README.md
 
-# ============================
-# 🔐 Secrets & Credentials
-# ============================
 *credentials*.json
 *service_account*.json
 telecom-ai-agent-*.json
 
-# ============================
-# 📝 Logs & Temp Files
-# ============================
 *.log
 *.tmp
 *.temp
 /tmp/
 .cache/
 
-# ============================
-# 🧠 Jupyter / Experiments
-# ============================
 .ipynb_checkpoints/
 *.ipynb
 
-# ============================
-# 🖥️ OS / IDE Files
-# ============================
+
 .DS_Store
 Thumbs.db
 .vscode/
 .idea/
 
-# ============================
-# 🐳 Git & CI
-# ============================
 .git/
 .gitignore
 .github/
 
-# ============================
-# 📄 Docs (Optional)
-# ============================
 README.md~
