@@ -1,64 +1,186 @@
-# 🎙️ VoiceCare AI
-**Intelligent AI-Powered Telecom Service Agent**
+🎙️ VoiceCare AI – Intelligent Telecom Service Agent 📡🤖
 
-VoiceCare AI is a production-grade AI system designed to automate and enhance telecom customer support by combining **Voice AI**, **LLMs**, **RAG**, **Machine Learning**, **CRM integration**, and **Real-time Analytics**.
+VoiceCare AI is a production-grade AI-powered telecom customer service system designed to automate complaint handling, enhance customer experience, and provide actionable analytics for telecom operators.
 
-The system helps telecom providers handle customer complaints efficiently, predict recurring issues, and improve customer satisfaction using data-driven intelligence.
+The platform combines Voice AI, LLMs, Retrieval-Augmented Generation (RAG), Machine Learning behavioral prediction, CRM integration, and a real-time analytics dashboard into a unified intelligent service agent.
 
----
+🚀 Key Features
+1. 🎤 Voice-Based Complaint Handling
 
-## 🚀 Key Features
-- 🎤 **Voice-to-Text Complaint Handling** (Whisper)
-- 🤖 **AI Service Agent with LLMs & RAG**
-- 🧠 **Intelligent Issue Classification (Arabic-focused)**
-- 🔮 **Behavioral ML Prediction for Next Customer Issue**
-- 📞 **CRM Integration (Customer & Subscription Data)**
-- 📊 **Live Analytics Dashboard**
-- 🔁 **Self-learning & Retraining Pipeline**
-- 🐳 **Dockerized & Production-Ready Deployment**
-- 🔐 **Security & Privacy by Design**
+Speech-to-Text (Whisper): Customers can submit complaints via voice or audio files.
 
----
+Arabic-Optimized: Tuned for Arabic telecom terminology and real customer expressions.
 
-## 🧱 System Architecture
-The system follows a modular, scalable architecture:
+Hands-Free Interaction: Enables faster complaint intake without manual typing.
 
-- **Frontend**: Gradio (Agent UI + Analytics Dashboard)
-- **Voice Layer**: Whisper (Speech-to-Text)
-- **AI Layer**:
-  - LLM (Gemma)
-  - RAG with FAISS + Sentence Transformers
-- **ML Layer**:
-  - Issue Classification
-  - Behavioral Prediction Models
-- **Data Layer**:
-  - Google Sheets (Cases & Feedback)
-  - CRM Dataset (Offline)
-- **Deployment**:
-  - Docker
-  - Hugging Face Spaces
+2. 🤖 AI Service Agent (LLM + RAG)
 
-> 📌 Architecture diagram and screenshots are available in `/assets`
+LLM-Powered Responses: Uses a large language model to format and present troubleshooting steps clearly.
 
----
+RAG Pipeline: Retrieves the most relevant historical solutions using FAISS + semantic embeddings.
 
-## 🛠️ Tech Stack
-- **Python 3.10**
-- **Gradio**
-- **PyTorch**
-- **Transformers**
-- **Sentence-Transformers**
-- **FAISS**
-- **Whisper**
-- **Scikit-learn / XGBoost / LightGBM**
-- **Plotly**
-- **Google Sheets API**
-- **Docker**
+Step-by-Step Resolution: Guides customers through structured troubleshooting flows.
 
----
+3. 🧠 Intelligent Issue Classification
 
-## 📂 Project Structure
-```text
+Automatically classifies customer complaints into telecom categories such as:
+
+Internet Down
+
+Slow Internet
+
+Router Issues
+
+Billing Issues
+
+Landline Problems
+
+Roaming & Offers
+
+Confidence Scoring: Each classification includes a confidence score and source (intent/context).
+
+4. 🔮 Behavioral Issue Prediction
+
+Next-Issue Prediction: Predicts the customer’s next likely issue based on historical behavior.
+
+Pattern Learning: Leverages customer issue sequences and resolution patterns.
+
+ML Models: Trained using ensemble techniques (Random Forest, XGBoost, LightGBM).
+
+5. 📞 CRM Integration
+
+Fetches customer data using normalized phone numbers.
+
+Displays:
+
+Customer name
+
+Subscription type
+
+Bundle price
+
+Works safely with registered and unregistered customers.
+
+6. 📊 Live Analytics Dashboard
+
+Real-time KPIs:
+
+Total cases
+
+Resolution rate
+
+Average resolution time
+
+Customer satisfaction rating
+
+Prediction usage & accuracy
+
+Interactive charts:
+
+Weekly trends
+
+Case status distribution
+
+Rating analysis
+
+Powered by Plotly + Gradio.
+
+7. 🔁 Self-Learning & Retraining
+
+Collects high-quality feedback samples.
+
+Supports admin-triggered retraining of behavioral models.
+
+Designed with MLOps best practices in mind.
+
+8. 🐳 Production-Ready Deployment
+
+Fully Dockerized
+
+Deployed on Hugging Face Spaces
+
+Secure environment-variable-based configuration
+
+No secrets or customer data in the repository
+
+🏗️ System Architecture
+
+VoiceCare AI follows a modular, scalable architecture:
+
+Frontend
+
+Gradio (AI Agent UI + Analytics Dashboard)
+
+Voice Layer
+
+Whisper (Speech-to-Text)
+
+AI Layer
+
+LLM (Gemma)
+
+RAG (Sentence Transformers + FAISS)
+
+ML Layer
+
+Issue Classification
+
+Behavioral Prediction Models
+
+Data Layer
+
+Google Sheets (Cases, Feedback, Analytics)
+
+CRM Dataset (Offline, Secure)
+
+Deployment
+
+Docker
+
+Hugging Face Spaces
+
+📌 Architecture diagram and UI screenshots are available in /assets.
+
+🛠️ Tech Stack
+Backend & AI
+
+Python 3.10
+
+PyTorch
+
+Transformers
+
+Sentence-Transformers
+
+FAISS
+
+Whisper (faster-whisper)
+
+Scikit-learn
+
+XGBoost
+
+LightGBM
+
+Data & Analytics
+
+Pandas
+
+NumPy
+
+Plotly
+
+Google Sheets API
+
+UI & Deployment
+
+Gradio
+
+Docker
+
+Hugging Face Spaces
+
+📂 Project Structure
 VoiceCare-AI/
 ├── app.py
 ├── Dockerfile
@@ -79,61 +201,56 @@ VoiceCare-AI/
 │
 └── vector_store/
     └── README.md
-⚙️ Environment Variables
+📋 Prerequisites
 
-The following environment variables are required (not included in the repository):
+-Python 3.10+
+
+-Docker
+
+-FFmpeg (for audio processing)
+
+-Google Sheets API access
+
+-Hugging Face account
+
+⚙️ Environment Variables
 HF_TOKEN=your_huggingface_token
 GOOGLE_SERVICE_ACCOUNT='{}'
 ADMIN_PASSWORD=******
-▶️ Run Locally (Docker)
+⚠️ All secrets are excluded from the repository.
+
+⚡ Installation & Run (Docker)
 docker build -t voicecare-ai .
 docker run -p 7860:7860 voicecare-ai
+
+Access the app at:
+👉 http://localhost:7860
+
 🌐 Live Demo
-🔗 Hugging Face Space:
-https://huggingface.co/spaces/youssefmoustafa172/VoiceCare-AI
-👥 Team
-Eman Taha
-Menna Osama
-Mariam Maged
-Shorok Mohamed
-  
+
+🔗 Hugging Face Space – VoiceCare AI
+👉 https://huggingface.co/spaces/youssefmoustafa172/VoiceCare-AI
+
+👥 Meet the Team
+
+VoiceCare AI was developed through a strong collaborative effort by a multidisciplinary AI team, combining skills in AI systems, machine learning, data analysis, and applied intelligence.
+
+Name	Role
+Eman Taha	AI Engineer
+Menna Osama	AI Engineer
+Mariam Maged	AI Engineer
+Shorok Mohamed	AI Engineer
+
 🔐 Security & Privacy
 
-No credentials or secrets are stored in the repository
+No credentials stored in code
 
-No customer data is publicly shared
+No customer data shared publicly
 
-Models and embeddings are excluded from GitHub
+Models and vector indexes excluded from GitHub
 
-📜 License
+Designed with privacy-first principles
 
-This project is for educational and demonstration purposes.
+📄 License
 
-
----
-
-# 📄 `models/README.md`
-
-```md
-# 🧠 Models Directory
-
-This directory contains trained Machine Learning models used for:
-
-- Behavioral prediction of next customer issues
-- Issue encoding and pattern learning
-
-## 🚫 Not Included in Repository
-For security, size, and best-practice reasons, the following files are **not** included in GitHub:
-- `.pkl` model files
-- Encoders
-- Training artifacts
-
-## 📌 Notes
-- Models are trained offline
-- Stored securely (e.g., Hugging Face, private storage)
-- Loaded dynamically at runtime
-
-This ensures:
-✔ Better security  
-✔ Cleaner repository  
-✔ Production-grade MLOps practices
+This project is intended for educational, research, and demonstration purposes.
