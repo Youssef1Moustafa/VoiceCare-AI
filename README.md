@@ -96,7 +96,6 @@ Includes confidence scoring and decision source tracking.
 
 ---
 
-## 📂 Project Structure
 VoiceCare-AI/
 ├── app.py
 ├── Dockerfile
@@ -105,19 +104,19 @@ VoiceCare-AI/
 ├── .gitignore
 │
 ├── assets/
-│ ├── logo.png
-│ ├── architecture.png
-│ ├── agent_ui.png
-│ └── dashboard.png
+│   ├── logo.png
+│   ├── agent_ui.png
+│   └── dashboard.png
 │
 ├── data/
-│ └── README.md
+│   └── README.md
 │
 ├── models/
-│ └── README.md
+│   └── README.md
 │
 └── vector_store/
-└── README.md
+    └── README.md
+
 
 
 ---
