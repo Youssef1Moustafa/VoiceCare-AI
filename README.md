@@ -202,7 +202,7 @@ Contributions are welcome! Please open an issue or submit a pull request.
 ---
 
 ## 📞 Support
-###For questions or support:
+For questions or support:
 
 📧 Email: youssefmoustafa172@gmail.com
 
