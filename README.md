@@ -179,7 +179,8 @@ https://huggingface.co/spaces/youssefmoustafa172/VoiceCare-AI
 
 ## 📄 License
 
-This project is intended for educational, research, and demonstration purposes.
+This project is designed as a production-ready AI system and serves as a practical implementation of an intelligent telecom service platform, demonstrating real-world system design, AI integration, and deployment practices.
+
 
 ---
 
