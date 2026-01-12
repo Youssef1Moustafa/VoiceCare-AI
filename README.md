@@ -183,29 +183,5 @@ This project is intended for educational, research, and demonstration purposes.
 
 ---
 
-# 📄 `models/README.md`
 
-```md
-# 🧠 Models Directory
-
-This directory contains trained Machine Learning models used for:
-
-- Behavioral prediction of next customer issues
-- Issue encoding and pattern learning
-
-## 🚫 Not Included in Repository
-For security, size, and best-practice reasons, the following files are **not** included in GitHub:
-- `.pkl` model files
-- Encoders
-- Training artifacts
-
-## 📌 Notes
-- Models are trained offline
-- Stored securely (e.g., Hugging Face, private storage)
-- Loaded dynamically at runtime
-
-This ensures:
-✔ Better security  
-✔ Cleaner repository  
-✔ Production-grade MLOps practices
 
